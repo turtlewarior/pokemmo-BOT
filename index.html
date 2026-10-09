@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PokéMMO Ditto Bot – Automatic Ditto Finder (OpenCV) | $5 Lifetime</title>
+<meta name="description" content="PokéMMO Ditto bot that detects Ditto with OpenCV template matching. Lifetime license for $5 in Monero. Windows 11 setup guide, requirements and FAQ.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="Ditto Bot">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/">
+<link rel="alternate" hreflang="x-default" href="https://YOUR-DOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ditto Bot">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="PokéMMO Ditto Bot – Automatic Ditto Finder">
+<meta property="og:description" content="OpenCV-powered Ditto detection for PokéMMO. $5 lifetime license, paid in Monero.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.png">
+<meta property="og:image:alt" content="PokéMMO Ditto bot banner">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PokéMMO Ditto Bot – Automatic Ditto Finder">
+<meta name="twitter:description" content="OpenCV-powered Ditto detection for PokéMMO. $5 lifetime license.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.png">
+<meta name="theme-color" content="#7c5cc4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟣</text></svg>">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://YOUR-DOMAIN.com/#website","url":"https://YOUR-DOMAIN.com/","name":"Ditto Bot","inLanguage":"en"},
+{"@type":"WebPage","@id":"https://YOUR-DOMAIN.com/#webpage","url":"https://YOUR-DOMAIN.com/","name":"PokéMMO Ditto Bot – Automatic Ditto Finder","isPartOf":{"@id":"https://YOUR-DOMAIN.com/#website"},"dateModified":"2026-10-09","breadcrumb":{"@id":"https://YOUR-DOMAIN.com/#crumbs"}},
+{"@type":"BreadcrumbList","@id":"https://YOUR-DOMAIN.com/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://YOUR-DOMAIN.com/"}]},
+{"@type":"SoftwareApplication","name":"Ditto Bot for PokéMMO","softwareVersion":"2.0","applicationCategory":"GameApplication","operatingSystem":"Windows 11, Linux","description":"Python bot that detects Ditto in PokéMMO using OpenCV template matching.","url":"https://YOUR-DOMAIN.com/","offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","description":"Lifetime license, payable in Monero (XMR)","availability":"https://schema.org/InStock","url":"https://YOUR-DOMAIN.com/#pricing"}},
+{"@type":"HowTo","name":"How to set up the PokéMMO Ditto bot","step":[
+{"@type":"HowToStep","name":"Install Python","text":"Install Python 3.10 or newer."},
+{"@type":"HowToStep","name":"Install dependencies","text":"Run pip install opencv-python pynput pyautogui mss numpy."},
+{"@type":"HowToStep","name":"Run PokéMMO windowed","text":"Start PokéMMO in windowed mode and keep the window visible."},
+{"@type":"HowToStep","name":"Start the bot","text":"Enter your license key and run python bot.py."}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How does the PokéMMO Ditto bot detect Ditto?","acceptedAnswer":{"@type":"Answer","text":"It captures the screen with mss and runs OpenCV template matching against a reference image of Ditto, which is faster and more reliable than OCR."}},
+{"@type":"Question","name":"How much does the Ditto bot cost?","acceptedAnswer":{"@type":"Answer","text":"A lifetime license costs $5 USD, paid in Monero (XMR) at the current exchange rate."}},
+{"@type":"Question","name":"Which operating systems does it support?","acceptedAnswer":{"@type":"Answer","text":"Windows 11 is the main target. An earlier version also ran on Linux with Wayland."}},
+{"@type":"Question","name":"Why OpenCV instead of OCR?","acceptedAnswer":{"@type":"Answer","text":"Template matching compares pixels directly, so it avoids the misreads and slowness of text recognition."}},
+{"@type":"Question","name":"Do I need to know Python?","acceptedAnswer":{"@type":"Answer","text":"No. You install Python once, install the dependencies with one command and run the script."}},
+{"@type":"Question","name":"Is using a bot allowed in PokéMMO?","acceptedAnswer":{"@type":"Answer","text":"No. PokéMMO's rules prohibit automation and accounts can be banned. Use at your own risk."}}]}]}
+</script>
+<style>
+:root{--bg:#fbfaff;--fg:#1d1a2b;--mut:#5f5a78;--card:#fff;--ac:#6b49b8;--bd:#e4def5}
+@media(prefers-color-scheme:dark){:root{--bg:#15121f;--fg:#efeaff;--mut:#a9a2c8;--card:#1f1b2e;--bd:#332d4d;--ac:#a98ef0}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:var(--card);padding:8px;z-index:9}
+header{border-bottom:1px solid var(--bd)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;flex-wrap:wrap;gap:10px}
+nav a{color:var(--fg);text-decoration:none;margin-left:16px;font-size:15px}
+.hero{padding:64px 0 40px;text-align:center}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 16px}
+.hero p{max-width:640px;margin:0 auto 24px;color:var(--mut);font-size:18px}
+.btn{display:inline-block;background:var(--ac);color:#fff;padding:12px 26px;border-radius:10px;text-decoration:none;font-weight:600;margin:4px}
+.btn.o{background:none;color:var(--ac);border:2px solid var(--ac)}
+section{padding:40px 0}
+h2{font-size:1.65rem;margin:0 0 16px}h3{margin:0 0 6px}
+p{margin:0 0 14px}a{color:var(--ac)}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;position:relative}
+.c p{color:var(--mut);margin:0}
+.price{font-size:2.2rem;font-weight:700}.price small{font-size:1rem;color:var(--mut);font-weight:400}
+.c ul{padding-left:18px;color:var(--mut)}
+.pop{border:2px solid var(--ac)}
+.tag{position:absolute;top:-12px;left:20px;background:var(--ac);color:#fff;font-size:12px;padding:2px 10px;border-radius:99px}
+.c .btn{display:block;text-align:center;margin:0}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden}
+th,td{padding:10px 14px;border-bottom:1px solid var(--bd);text-align:left}th{background:var(--bd)}
+.tw{overflow-x:auto}
+pre{background:#14111f;color:#e8e2ff;padding:16px;border-radius:12px;overflow-x:auto;font-size:14px}
+details{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}details p{margin:10px 0 0;color:var(--mut)}
+.warn{border-left:4px solid #d9822b;background:var(--card);padding:14px 18px;border-radius:8px;color:var(--mut)}
+footer{border-top:1px solid var(--bd);padding:28px 0;text-align:center;color:var(--mut);font-size:14px}
+footer a{margin:0 8px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="w"><nav aria-label="Main navigation">
+<strong>🟣 Ditto Bot</strong>
+<div><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#pricing">Pricing</a><a href="#setup">Setup</a><a href="#faq">FAQ</a></div>
+</nav></div></header>
+
+<main id="main"><div class="w">
+
+<div class="hero">
+<h1>PokéMMO Ditto Bot: Automatic Ditto Finder</h1>
+<p>A fast Python bot that spots Ditto on screen with OpenCV template matching. Built for Windows 11, easy to set up, and only <strong>$5 for a lifetime license</strong>.</p>
+<a class="btn" href="#pricing">Get the bot – $5</a>
+<a class="btn o" href="#how-it-works">See how it works</a>
+</div>
+
+<section id="features" aria-labelledby="f">
+<h2 id="f">Ditto bot features</h2>
+<div class="g">
+<article class="c"><h3>OpenCV Ditto detection</h3><p>Template matching recognises Ditto directly from pixels, replacing slow and error-prone OCR.</p></article>
+<article class="c"><h3>Fast screen capture</h3><p>The mss library grabs frames with low latency and minimal CPU use.</p></article>
+<article class="c"><h3>Keyboard and mouse control</h3><p>pynput and pyautogui send the inputs, with fixes for Windows 11 input injection.</p></article>
+<article class="c"><h3>Lifetime updates</h3><p>One payment covers the license and all future v2 updates.</p></article>
+</div>
+</section>
+
+<section id="how-it-works" aria-labelledby="h">
+<h2 id="h">How the PokéMMO Ditto bot works</h2>
+<p>PokéMMO players hunt Ditto because it is the base for breeding. Searching by hand means long stretches of repetitive play. This bot automates the detection step so you do not have to watch every encounter.</p>
+<p>The bot captures the game window with <strong>mss</strong>, then compares each frame to a reference image of Ditto using <strong>OpenCV template matching</strong>. When the match score passes your threshold, it reacts. Because it works on pixels instead of reading text, it skips the misreads that OCR-based bots suffer from.</p>
+<h3>Template matching vs OCR for Ditto detection</h3>
+<div class="tw"><table>
+<thead><tr><th>Method</th><th>Speed</th><th>Accuracy</th><th>Setup</th></tr></thead>
+<tbody>
+<tr><td>OpenCV template matching</td><td>Fast</td><td>High, tunable threshold</td><td>One reference image</td></tr>
+<tr><td>OCR text reading</td><td>Slower</td><td>Prone to misreads</td><td>Needs fonts and cleanup</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="pricing" aria-labelledby="p">
+<h2 id="p">Pricing</h2>
+<div class="g" style="grid-template-columns:minmax(260px,420px);justify-content:center">
+<article class="c pop"><span class="tag">Lifetime</span><h3>Ditto Bot License</h3>
+<div class="price">$5 <small>one-time</small></div>
+<p style="margin-bottom:6px">≈ <strong id="xmr">… XMR</strong> <small>at current rate</small></p>
+<ul><li>Full bot access</li><li>All future v2 updates</li><li>Email support</li></ul>
+<a class="btn" href="#pay">Request an XMR payment</a></article>
+</div>
+<div id="pay" class="c" style="margin-top:20px">
+<h3>Manual payment with Monero (XMR)</h3>
+<p>This is a manual checkout: no payment is taken automatically on this website.</p>
+<ol>
+<li>Click the button below to request an order by email.</li>
+<li>I'll reply with the confirmed XMR amount and a Monero receiving address for your order.</li>
+<li>Send the payment from your Monero wallet, then reply with the transaction ID (txid).</li>
+<li>Your order is processed manually after I verify that the payment has arrived and has sufficient confirmations.</li>
+</ol>
+<p><strong>Important:</strong> The XMR figure above is only an estimate based on a live USD exchange rate. Wait for the amount in the reply before sending. Never send funds to an address copied from an old email or an unverified message.</p>
+<a class="btn" href="mailto:turtlewarior46@gmail.com?subject=Ditto%20Bot%20-%20XMR%20order%20request&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20a%20Ditto%20Bot%20license%20and%20pay%20in%20Monero%20(XMR).%0A%0APlease%20send%20me%20the%20confirmed%20amount%20and%20payment%20instructions.%0A%0AThank%20you.">Request payment by email</a>
+<p style="font-size:14px;margin-top:12px">Before publishing, replace <code>turtlewarior46@gmail.com</code> everywhere with an email address you control.</p>
+</div>
+</section>
+
+<section id="requirements" aria-labelledby="r">
+<h2 id="r">System requirements</h2>
+<div class="tw"><table>
+<tbody>
+<tr><th>Operating system</th><td>Windows 11 (earlier build also ran on Linux/Wayland)</td></tr>
+<tr><th>Python</th><td>3.10 or newer</td></tr>
+<tr><th>Libraries</th><td>opencv-python, pynput, pyautogui, mss, numpy</td></tr>
+<tr><th>Game mode</th><td>PokéMMO in windowed mode, window visible</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="setup" aria-labelledby="s">
+<h2 id="s">How to set up the Ditto bot</h2>
+<ol>
+<li>Install Python 3.10 or newer.</li>
+<li>Download the bot from your purchase email, unzip it, and install the dependencies:</li>
+</ol>
+<pre><code>cd ditto-bot
+pip install opencv-python pynput pyautogui mss numpy</code></pre>
+<ol start="3">
+<li>Run PokéMMO in windowed mode and keep the window visible.</li>
+<li>Enter your license key and start the bot with <code>python bot.py</code>.</li>
+</ol>
+</section>
+
+<section aria-labelledby="w">
+<h2 id="w">Important notice</h2>
+<p class="warn">PokéMMO's rules prohibit automation. Using any bot can lead to a ban of your account. Purchases are used at your own risk. This site is not affiliated with PokéMMO, Nintendo or The Pokémon Company.</p>
+</section>
+
+<section id="faq" aria-labelledby="q">
+<h2 id="q">Frequently asked questions</h2>
+<details><summary>How does the PokéMMO Ditto bot detect Ditto?</summary><p>It captures the screen with mss and runs OpenCV template matching against a reference image of Ditto.</p></details>
+<details><summary>How much does the Ditto bot cost?</summary><p>A lifetime license is $5 USD, paid in Monero (XMR) at the current exchange rate.</p></details>
+<details><summary>Which operating systems does it support?</summary><p>Windows 11 is the main target. An earlier version also ran on Linux with Wayland.</p></details>
+<details><summary>Why OpenCV instead of OCR?</summary><p>Template matching compares pixels directly, so it avoids the misreads and slowness of text recognition.</p></details>
+<details><summary>Do I need to know Python?</summary><p>No. You install Python once, install the dependencies with one command and run the script.</p></details>
+<details><summary>Do you offer refunds?</summary><p>Add your refund policy here. Monero payments cannot be reversed, so state clearly whether you refund manually.</p></details>
+<details><summary>Is using a bot allowed in PokéMMO?</summary><p>No. Automation is against the game's rules and can get your account banned.</p></details>
+</section>
+
+</div></main>
+
+<footer><div class="w">
+<nav aria-label="Footer"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#setup">Setup</a><a href="#faq">FAQ</a><a href="mailto:turtlewarior46@gmail.com">Support</a></nav>
+<p>© 2026 Ditto Bot · Unofficial project</p>
+</div></footer>
+
+<script>
+(async()=>{const el=document.getElementById('xmr');
+try{const d=await (await fetch('https://api.coingecko.com/api/v3/simple/price?ids=monero&vs_currencies=usd')).json();
+el.textContent=(5/d.monero.usd).toFixed(4)+' XMR';}catch(e){el.textContent='see current XMR rate for $5';}})();
+</script>
+</body>
+</html>
